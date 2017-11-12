@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/gulch/minify.svg?branch=master)](https://travis-ci.org/gulch/minify)
+
 # gulch/Minify
 PHP Package for minify HTML code.
 
