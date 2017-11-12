@@ -11,11 +11,12 @@ class MinifierDefaultTest extends TestCase
 {
     use GetDataTrait;
 
+    /** @test */
     public function testMinifierByDefaultOptions()
     {
         $minifier = Minifier::createDefault();
 
-        $this->assertEquals(
+        $this->assertSame(
             $minifier->process($this->getSourceCode()),
             $this->getMinifiedCode()
         );

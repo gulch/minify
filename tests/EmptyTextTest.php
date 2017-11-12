@@ -7,6 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class EmptyTextTest extends TestCase
 {
+    /** @test */
     public function testEmptyTextMinification()
     {
         $minifier = Minifier::createDefault();
