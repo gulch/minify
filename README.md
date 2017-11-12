@@ -9,8 +9,8 @@ Add to your **composer.json** file this git repo
 ```bash
 "repositories":[
     {
-	      "type": "git",
-	      "url": "http://github.com/gulch/minify"
+	    "type": "git",
+	    "url": "http://github.com/gulch/minify"
     }
 ]
 ```
@@ -25,7 +25,7 @@ and finally run
 composer update
 ```
 ## How to use
-```
+```php
 $minifier = gulch\Minify\Minifier::createDefault();
-$minified_code = $minifier->process($code /* <- your html code*/);
+$minified_code = $minifier->process($code);
 ```

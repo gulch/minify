@@ -8,6 +8,10 @@ class InlineCssMinifier implements ProcessorInterface
 {
     public function process(string $buffer): string
     {
+        if (mb_strlen($buffer) === 0) {
+            return '';
+        }
+
         $css_minified = [];
         preg_match_all('{<style.+</style>}msU', $buffer, $style_blocks);
 

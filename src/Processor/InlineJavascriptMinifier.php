@@ -8,6 +8,10 @@ class InlineJavascriptMinifier implements ProcessorInterface
 {
     public function process(string $buffer): string
     {
+        if (mb_strlen($buffer) === 0) {
+            return '';
+        }
+
         $javascript_minified = [];
         preg_match_all('{<script.+</script>}msU', $buffer, $script_blocks);
 

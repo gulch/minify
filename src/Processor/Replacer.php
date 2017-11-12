@@ -8,6 +8,10 @@ abstract class Replacer
 
     public function process(string $buffer): string
     {
+        if (mb_strlen($buffer) === 0) {
+            return '';
+        }
+
         return $this->replace(
             $this->getReplacePatternData(),
             $buffer

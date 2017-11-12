@@ -61,6 +61,10 @@ class WhitespacesRemover implements ProcessorInterface
 
     public function process(string $buffer): string
     {
+        if (mb_strlen($buffer) === 0) {
+            return '';
+        }
+
         // Find all the <pre>,<code>,<textarea>, and <javascript> tags
         // We'll want to return them to this unprocessed state later.
         preg_match_all('{<pre.+</pre>}msU', $buffer, $pres_source);
