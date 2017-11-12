@@ -8,12 +8,12 @@ class InlineCssMinifier implements ProcessorInterface
 {
     public function process(string $buffer): string
     {
-        if (mb_strlen($buffer) === 0) {
+        if (\strlen($buffer) === 0) {
             return '';
         }
 
         $css_minified = [];
-        preg_match_all('{<style.+</style>}msU', $buffer, $style_blocks);
+        \preg_match_all('{<style.+</style>}msU', $buffer, $style_blocks);
 
         // Minify the javascript in <script> tags.
         foreach ($style_blocks[0] as $block) {
@@ -21,7 +21,7 @@ class InlineCssMinifier implements ProcessorInterface
         }
 
         if (\sizeof($css_minified)) {
-            $buffer = str_replace($style_blocks[0], $css_minified, $buffer);
+            $buffer = \str_replace($style_blocks[0], $css_minified, $buffer);
         }
 
         return $buffer;

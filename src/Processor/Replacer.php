@@ -8,7 +8,7 @@ abstract class Replacer
 
     public function process(string $buffer): string
     {
-        if (mb_strlen($buffer) === 0) {
+        if (\strlen($buffer) === 0) {
             return '';
         }
 
