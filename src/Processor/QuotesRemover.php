@@ -14,11 +14,9 @@ class QuotesRemover extends Replacer implements ProcessorInterface
             '/height="(.*?)"/' => 'height=$1',
             '/name="(.*?)"/' => 'name=$1',
             '/charset="(.*?)"/' => 'charset=$1',
-            //'/href="(.*?)"/' => 'href=$1',
             '/align="(.*?)"/' => 'align=$1',
             '/border="(.*?)"/' => 'border=$1',
             '/crossorigin="(.*?)"/' => 'crossorigin=$1',
-            //'/rel="(.*?)"/' => 'rel=$1',
             '/type="(.*?)"/' => 'type=$1',
             '/\/>/' => '>',
         ];
