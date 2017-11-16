@@ -36,6 +36,7 @@ class WhitespacesRemover implements ProcessorInterface
         'html',
         'li',
         'link',
+        'main',
         'map',
         'meta',
         'noscript',
