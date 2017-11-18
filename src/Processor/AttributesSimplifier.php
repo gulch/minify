@@ -6,7 +6,7 @@ use gulch\Minify\Contract\ProcessorInterface;
 
 class AttributesSimplifier extends Replacer implements ProcessorInterface
 {
-    function getReplacePatternData(): array
+    public function getReplacePatternData(): array
     {
         return [
             '/ method=("get"|get)/i' => '',

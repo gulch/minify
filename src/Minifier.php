@@ -3,12 +3,10 @@
 namespace gulch\Minify;
 
 use gulch\Minify\Contract\ProcessorInterface;
-use gulch\Minify\Processor\{
-    HtmlCommentsRemover,
-    InlineCssMinifier,
-    InlineJavascriptMinifier,
-    WhitespacesRemover
-};
+use gulch\Minify\Processor\HtmlCommentsRemover;
+use gulch\Minify\Processor\InlineCssMinifier;
+use gulch\Minify\Processor\InlineJavascriptMinifier;
+use gulch\Minify\Processor\WhitespacesRemover;
 
 class Minifier implements ProcessorInterface
 {

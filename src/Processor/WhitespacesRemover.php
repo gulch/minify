@@ -78,7 +78,8 @@ class WhitespacesRemover implements ProcessorInterface
 
         // Remove spaces around block-level elements.
         $buffer = preg_replace(
-            '/\s*(<\/?(' . implode('|', self::BLOCK_ELEMENTS) . ')[^>]*>)\s*/is', '$1',
+            '/\s*(<\/?(' . implode('|', self::BLOCK_ELEMENTS) . ')[^>]*>)\s*/is',
+            '$1',
             $buffer
         );
 

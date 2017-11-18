@@ -4,7 +4,7 @@ namespace gulch\Minify\Processor;
 
 abstract class Replacer
 {
-    abstract function getReplacePatternData(): array;
+    abstract public function getReplacePatternData(): array;
 
     public function process(string $buffer): string
     {
