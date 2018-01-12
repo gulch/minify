@@ -27,9 +27,11 @@ class Minifier implements ProcessorInterface
         return $buffer;
     }
 
-    public function addProcessor(ProcessorInterface $processor): void
+    public function addProcessor(ProcessorInterface $processor): self
     {
         $this->processors[] = $processor;
+
+        return $this;
     }
 
     public static function createDefault(): self

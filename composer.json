@@ -3,10 +3,27 @@
   "description": "Package for minify and optimize HTML code",
   "type": "library",
   "license": "MIT",
+  "keywords": [
+    "minify",
+    "html",
+    "html5",
+    "pagespeed",
+    "optimization",
+    "wpo",
+    "webperf",
+    "performance",
+    "script",
+    "javascript",
+    "css",
+    "stylesheets",
+    "php"
+  ],
   "authors": [
     {
       "name": "Volodymyr Gulchuk",
-      "email": "volodymyr@gulchuk.com"
+      "email": "volodymyr@gulchuk.com",
+      "homepage": "https://gulchuk.com",
+      "role": "Developer"
     }
   ],
   "require": {
