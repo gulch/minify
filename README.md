@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/gulch/minify.svg?branch=master)](https://travis-ci.org/gulch/minify)
+[![Build Status](https://travis-ci.org/gulch/minify.svg?branch=master)](https://travis-ci.org/gulch/minify) [![Coverage Status](https://coveralls.io/repos/github/gulch/minify/badge.svg?branch=master)](https://coveralls.io/github/gulch/minify?branch=master)
 
 # gulch/Minify
 PHP Package for minify HTML code.
