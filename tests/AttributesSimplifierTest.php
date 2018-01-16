@@ -8,7 +8,6 @@ use PHPUnit\Framework\TestCase;
 
 class AttributesSimplifierTest extends TestCase
 {
-    /** @test */
     public function testAttributesSimplifier()
     {
         $minifier = new Minifier(new AttributesSimplifier);
