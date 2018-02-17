@@ -70,8 +70,6 @@ class InlineCssMinifier implements ProcessorInterface
             $buffer
         );
 
-        return \is_array($tags)
-            ? $tags['open'] . $buffer . $tags['close']
-            : $buffer;
+        return $tags['open'] . $buffer . $tags['close'];
     }
 }

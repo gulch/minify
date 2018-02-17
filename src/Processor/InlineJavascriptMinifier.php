@@ -84,8 +84,6 @@ class InlineJavascriptMinifier implements ProcessorInterface
         \ksort($js_code);
         $buffer = \implode($js_code);
 
-        return \is_array($tags)
-            ? $tags['open'] . $buffer . $tags['close']
-            : $buffer;
+        return $tags['open'] . $buffer . $tags['close'];
     }
 }
