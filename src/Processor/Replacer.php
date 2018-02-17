@@ -20,9 +20,9 @@ abstract class Replacer
 
     public function replace(array $replace, string $buffer): string
     {
-        $result = preg_replace(
-            array_keys($replace),
-            array_values($replace),
+        $result = \preg_replace(
+            \array_keys($replace),
+            \array_values($replace),
             $buffer
         );
 

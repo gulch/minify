@@ -29,16 +29,16 @@ class InlineCssMinifier implements ProcessorInterface
 
     private function minifyCss(string $buffer): string
     {
-        $tags = ['close' => strrchr($buffer, '<')];
-        $open_length = strpos($buffer, '>') + 1;
-        $tags['open'] = substr($buffer, 0, $open_length);
-        $buffer = substr($buffer, $open_length, -strlen($tags['close']));
+        $tags = ['close' => \strrchr($buffer, '<')];
+        $open_length = \strpos($buffer, '>') + 1;
+        $tags['open'] = \substr($buffer, 0, $open_length);
+        $buffer = \substr($buffer, $open_length, -\strlen($tags['close']));
 
         // Strip spaces from the tags
-        $tags = preg_replace('/\s{2,}/', ' ', $tags);
+        $tags = \preg_replace('/\s{2,}/', ' ', $tags);
 
         // Standartize new lines
-        $buffer = str_replace(array("\r\n", "\r"), "\n", $buffer);
+        $buffer = \str_replace(["\r\n", "\r"], "\n", $buffer);
 
         $patterns = [
             // Remove comment(s)
@@ -64,9 +64,13 @@ class InlineCssMinifier implements ProcessorInterface
             '#(\/\*(?>.*?\*\/))|(^|[\{\}])(?:[^\s\{\}]+)\{\}#s' => '$1$2',
         ];
 
-        $buffer = preg_replace(array_keys($patterns), array_values($patterns), $buffer);
+        $buffer = \preg_replace(
+            \array_keys($patterns),
+            \array_values($patterns),
+            $buffer
+        );
 
-        return is_array($tags)
+        return \is_array($tags)
             ? $tags['open'] . $buffer . $tags['close']
             : $buffer;
     }
