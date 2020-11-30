@@ -7,6 +7,9 @@ php:
   - 7.4
   - 8.0
 
+os: linux
+dist: focal
+
 before_script:
   - composer self-update
   - composer install
