@@ -13,7 +13,7 @@ class AttributesSimplifierTest extends TestCase
         $minifier = new Minifier(new AttributesSimplifier);
 
         $source = '<form method="GET">
-                <input type="text" disabled="disabled">
+                <input disabled="disabled" type="text">
                 <input type="text" readonly="readonly">
                 <select name="abc">
                     <option selected="selected"></option>
@@ -23,7 +23,7 @@ class AttributesSimplifierTest extends TestCase
             <script defer="defer" src="/b.js"></script>';
 
         $result = '<form>
-                <input type="text" disabled>
+                <input disabled type="text">
                 <input type="text" readonly>
                 <select name="abc">
                     <option selected></option>

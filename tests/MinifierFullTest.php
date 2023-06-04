@@ -13,22 +13,21 @@ use gulch\Minify\Processor\InlineJavascriptMinifier;
 use gulch\Minify\Processor\QuotesRemover;
 use gulch\Minify\Processor\WhitespacesRemover;
 
-class MinifierFullTest extends TestCase
+final class MinifierFullTest extends TestCase
 {
     use GetDataTrait;
 
     /** @test */
-    public function testMinifierWithFullOptions()
+    public function testMinifierWithFullOptions(): void
     {
         $minifier = new Minifier(
             new WhitespacesRemover,
             new HtmlCommentsRemover,
             new InlineCssMinifier,
-            new InlineJavascriptMinifier
+            new InlineJavascriptMinifier,
+            new QuotesRemover,
+            new AttributesSimplifier,
         );
-
-        $minifier->addProcessor(new QuotesRemover);
-        $minifier->addProcessor(new AttributesSimplifier);
 
         $this->assertSame(
             $minifier->process($this->getSourceCode()),
