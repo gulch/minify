@@ -10,6 +10,7 @@ class WhitespacesRemover implements ProcessorInterface
         'address',
         'article',
         'aside',
+        'audio',
         'blockquote',
         'body',
         'canvas',
@@ -17,7 +18,6 @@ class WhitespacesRemover implements ProcessorInterface
         'colgroup',
         'datalist',
         'details',
-        'dialog',
         'div',
         'dl',
         'dt',
@@ -66,7 +66,7 @@ class WhitespacesRemover implements ProcessorInterface
         'tr',
         'track',
         'ul',
-        'video'
+        'video',
     ];
 
     public function process(string $buffer): string
