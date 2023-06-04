@@ -31,8 +31,8 @@ $minifier = new gulch\Minify\Minifier(
     new gulch\Minify\Processor\HtmlCommentsRemover,
     new gulch\Minify\Processor\InlineCssMinifier,
     new gulch\Minify\Processor\InlineJavascriptMinifier,
-    new gulch\Minify\Processor\QuotesRemover,
-    new gulch\Minify\Processor\AttributesSimplifier
+    new gulch\Minify\Processor\AttributesSimplifier,
+    new gulch\Minify\Processor\AttributeQuotesRemover,
 );
 $minified_code = $minifier->process($code);
 ```
