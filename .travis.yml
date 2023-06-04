@@ -1,11 +1,11 @@
 language: php
 
 php:
-  - 7.4
-  - 8.0
+  - 8.1
+  - 8.2
 
 os: linux
-dist: focal
+dist: jammy
 
 before_script:
   - composer self-update
