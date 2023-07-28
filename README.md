@@ -4,6 +4,8 @@
 # gulch/Minify
 PHP Package for minify HTML code.
 
+Special Thanks: [Funtime](https://funtime.com.ua) Team.
+
 ## Install
 
 You will need [Composer](http://getcomposer.org) installed.
